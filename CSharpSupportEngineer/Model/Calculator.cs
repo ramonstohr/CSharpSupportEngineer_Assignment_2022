@@ -17,9 +17,9 @@ namespace CSharpSupportEngineer.Model
         public decimal Multiply(decimal op1, decimal op2)
         {
             _output.WriteLine($"Multiplying {op1} with {op2}");
-            var result = Convert.ToInt32(op1 * op2);
+            var result = op1 * op2;
             _output.WriteLine($"Operations result is:");
-            _output.WriteLine(Convert.ToDecimal(result).ToString(".00"));
+            _output.WriteLine(result.ToString(".00"));
             return result;
         }
 
