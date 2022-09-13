@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -30,11 +31,12 @@ namespace CSharpSupportEngineer.Model
             decimal sum = 0;
             foreach (var match in matches)
             {
-                sum += Convert.ToInt16(match.ToString());
+                //the cultureinfo is only good practice, but only needed if the values come with a different decimal seperator than the system default.
+                sum += Convert.ToDecimal(match.ToString(), new CultureInfo("de-CH")); 
             }
 
             _output.WriteLine($"Operations result is:");
-            _output.WriteLine(Convert.ToInt32(sum));
+            _output.WriteLine(sum);
             return sum;
         }
 

@@ -29,7 +29,11 @@ namespace CSharpSupportEngineer
 
         private static void SumFromPlainText(Calculator calculator)
         {
-            calculator.SumFromPlainText("We sum the following number: 4.75 then 5 and 7 and finally 10.");
+            //maybe use ',' as decimal seperator, so that it is everywhere the same.
+            calculator.SumFromPlainText("We sum the following number: 4.75 then 5 and 7 and finally 10."); 
+
+            //or use string interpolation, so the culture is directly given. (then the culture-info in the SumFromPlainText is not needed anymore.)
+            //calculator.SumFromPlainText($"We sum the following number: {4.75m} then {5} and {7} and finally {10}."); 
         }
 
         private static void SumEvenNumbersFromStack(Calculator calculator)
