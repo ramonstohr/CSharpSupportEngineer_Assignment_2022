@@ -66,13 +66,4 @@ namespace CSharpSupportEngineer.Model
             return sum;
         }
     }
-
-    public sealed class Number
-    {
-        public Number(decimal value)
-        {
-            Value = value;
-        }
-        public decimal Value { get; set; }
-    }
 }
