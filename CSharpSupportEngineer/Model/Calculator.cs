@@ -7,7 +7,7 @@ namespace CSharpSupportEngineer.Model
 {
     public sealed class Calculator
     {
-        private static Regex _numberRegex = new Regex("[0-9]", RegexOptions.Compiled);
+        private static Regex _numberRegex = new Regex(@"[0-9]+\.?[0-9,]*", RegexOptions.Compiled); //regex only matched integers.
         private readonly IOutput _output;
         private NumberCache _numberCache = new NumberCache();
         public Calculator(IOutput output)
