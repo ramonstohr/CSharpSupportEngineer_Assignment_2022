@@ -10,7 +10,7 @@ namespace CSharpSupportEngineer.Model
         {
             numbers.ForEach(s =>
             {
-                _numberCache.Add(s);
+                _numberCache.Add(new Number(s.Value)); //generate a new number object with the same number from the original. Else it would be overriden in the Seed() function because of passing the reference in to the function.
 
             });
 
