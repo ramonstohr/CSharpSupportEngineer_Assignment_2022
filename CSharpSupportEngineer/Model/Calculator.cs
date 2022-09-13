@@ -41,7 +41,7 @@ namespace CSharpSupportEngineer.Model
         public decimal SumEvenNumbersFromStack(decimal[] oddNumbers)
         {
             _output.WriteLine($"Summing even ('gerade') numbers from: '{string.Join(",", oddNumbers.ToList())}'");
-            var result = oddNumbers.Where(s => s / 2 == 0).Select(s => s).Sum();
+            var result = oddNumbers.Where(s => s % 2 == 0).Select(s => s).Sum(); //modulo instead of division
             _output.WriteLine($"Sum even numbers: '{result}'");
             return result;
         }
