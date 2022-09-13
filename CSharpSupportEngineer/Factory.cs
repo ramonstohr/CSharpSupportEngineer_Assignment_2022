@@ -7,7 +7,7 @@ namespace CSharpSupportEngineer
     {
         public static Calculator CreateCalculator(IOutput output)
         {
-            var t = Type.GetType("CSharpSupportEngineer.Modell.Calculator");
+            var t = Type.GetType("CSharpSupportEngineer.Model.Calculator"); //Typo
             object[] args2 = { output };
             object o = Activator.CreateInstance(t, args2);
             return o as Calculator;
