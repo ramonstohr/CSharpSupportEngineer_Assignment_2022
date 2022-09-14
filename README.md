@@ -41,3 +41,9 @@ In der SumNumbers Funktion könnte man die doppelte Iteration über die List<Num
 Dies würde natürlich im **nicht** gefixten Falle, also beim Verändern der Originalzahlen, dazu führen, dass die geänderte Zahl ausgegeben wird und nicht die "Originale".
 
 
+### Testing
+
+Sinnvoll wäre vermutlich auch, dass man die einzelnen Funktionen gut mit Testing abdeckt.
+Ich habe dies mal testweise auf einen eigenen Branch eingecheckt -> Testing
+Dazu habe ich einen MockupOutput gemacht, da ich dort vielleicht keinen Output benötige oder diesen anders bewerkstellige. (Logs etc..)
+Dort habe ich mal ein paar Tests für die einzelnen Funktionen des Calculators geschrieben, jedoch nicht alle Möglichkeiten abgedeckt.
